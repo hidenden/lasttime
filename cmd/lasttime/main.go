@@ -29,6 +29,8 @@ func main() {
 		return
 	}
 
+	lasttime.ExpBufio(5, true)
+
 	fmt.Println("Hello World")
 	fmt.Println("Number of Go routine", runtime.NumGoroutine())
 	fmt.Println("Command revision", revision)
