@@ -2,7 +2,8 @@
 NAME := lasttime
 VERSION := 1
 REVISION := $(shell git rev-parse --short HEAD)
-LDFLAGS := "-X main.revision=$(REVISION)"
+GIT_VER := $(shell git describe --tags)
+LDFLAGS := "-X main.revision=$(REVISION) -X main.version=$(GIT_VER)"
 
 export GO111MODULE=on
 
