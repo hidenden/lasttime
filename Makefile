@@ -29,7 +29,7 @@ lint: devel-deps
 
 ## Build binaries ex. make bin/myprj
 bin/%: cmd/%/main.go deps
-	go build -ldflags "$(LDFLAGS)" -o $@ $<
+	go build -ldflags  $(LDFLAGS) -o $@ $<
 
 ## Build binary
 .PHONY: build
