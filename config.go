@@ -10,7 +10,7 @@ type Config struct {
 	Target []target `json:"target"`
 }
 
-func (c Config) AddTarget(name string, threshold int) {
+func (c *Config) AddTarget(name string, threshold int) {
 	t := target{
 		Name:      name,
 		Threshold: threshold,

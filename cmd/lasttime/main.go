@@ -18,7 +18,8 @@ func main() {
 	cfg := lasttime.Config{
 		Mode: "Hoge",
 	}
-	//{Name: "World", Threshold:2}}
+	cfg.AddTarget("Hi", 5)
+	cfg.AddTarget("Link", 3)
 
 	b, _ := json.MarshalIndent(&cfg, "", "  ")
 	fmt.Println(string(b))
